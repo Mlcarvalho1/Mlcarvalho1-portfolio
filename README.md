@@ -1,73 +1,168 @@
-# Welcome to your Lovable project
+# Manoel Carvalho - Portfolio
 
-## Project info
+A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a Computer Engineering student and Full-Stack Developer.
 
-**URL**: https://lovable.dev/projects/6b27b3c2-1b2a-4539-8621-e36ad5a52e46
+## 🌟 Features
 
-## How can I edit this code?
+- **Modern Design**: Clean, professional interface with smooth animations
+- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- **Dark/Light Theme**: Toggle between themes with system preference detection
+- **Interactive Components**: Smooth scrolling navigation and interactive elements
+- **Professional Sections**:
+  - Hero section with personal introduction
+  - About section with background information
+  - Education and academic achievements
+  - Professional timeline and experience
+  - Technical skills showcase
+  - Featured projects portfolio
+  - Professional recommendations
+  - Contact information and social links
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite for fast development and optimized builds
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: shadcn/ui components with Radix UI primitives
+- **Routing**: React Router DOM for navigation
+- **State Management**: TanStack Query for data fetching
+- **Theme Management**: next-themes for dark/light mode
+- **Icons**: Lucide React for consistent iconography
+- **Animations**: Tailwind CSS animations and custom transitions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6b27b3c2-1b2a-4539-8621-e36ad5a52e46) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (version 18 or higher)
+- npm, yarn, or bun package manager
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**
+   ```bash
+   git clone <your-repository-url>
+   cd Mlcarvalho1-portfolio
+   ```
 
-Follow these steps:
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   bun install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   bun dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the portfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Available Scripts
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Hero.tsx        # Hero section
+│   ├── About.tsx       # About section
+│   ├── Education.tsx   # Education section
+│   ├── Skills.tsx      # Skills showcase
+│   ├── Projects.tsx    # Projects portfolio
+│   ├── Timeline.tsx    # Professional timeline
+│   ├── Recommendations.tsx # Professional recommendations
+│   ├── Contact.tsx     # Contact information
+│   └── Navigation.tsx  # Navigation component
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── assets/             # Static assets (images, etc.)
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Customization
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Personal Information
+Update the following files to customize your portfolio:
+- `src/components/Hero.tsx` - Update name, title, and personal description
+- `src/components/About.tsx` - Modify about section content
+- `src/components/Education.tsx` - Update education details
+- `src/components/Skills.tsx` - Add or modify your skills
+- `src/components/Projects.tsx` - Showcase your projects
+- `src/components/Contact.tsx` - Update contact information and social links
 
-**Use GitHub Codespaces**
+### Styling
+- Modify `tailwind.config.ts` for custom colors and design tokens
+- Update `src/index.css` for global styles
+- Customize component styles in individual component files
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Deployment
 
-## What technologies are used for this project?
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. Deploy with a single click
 
-This project is built with:
+### Netlify
+1. Build the project: `npm run build`
+2. Upload the `dist` folder to Netlify
+3. Configure build settings if needed
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### GitHub Pages
+1. Add `"homepage": "https://yourusername.github.io/repository-name"` to package.json
+2. Install gh-pages: `npm install --save-dev gh-pages`
+3. Add deploy script: `"deploy": "gh-pages -d dist"`
+4. Build and deploy: `npm run build && npm run deploy`
 
-## How can I deploy this project?
+## 📱 Responsive Design
 
-Simply open [Lovable](https://lovable.dev/projects/6b27b3c2-1b2a-4539-8621-e36ad5a52e46) and click on Share -> Publish.
+The portfolio is fully responsive and optimized for:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Development
 
-Yes, you can!
+### Code Quality
+- ESLint configuration for code linting
+- TypeScript for type safety
+- Prettier for code formatting (recommended)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Performance
+- Vite for fast development and optimized builds
+- Image optimization for web assets
+- Lazy loading for better performance
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+While this is a personal portfolio, suggestions and improvements are welcome! Feel free to open issues or submit pull requests.
+
+## 📞 Contact
+
+- **LinkedIn**: [Manoel Carvalho](https://www.linkedin.com/in/manoel-carvalho-350507236)
+- **GitHub**: [Mlcarvalho1](https://github.com/Mlcarvalho1)
+- **Location**: Recife, Brazil
+- **Education**: Computer Engineering at UFPE (Expected 2028)
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS

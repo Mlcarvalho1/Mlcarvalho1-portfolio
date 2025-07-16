@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import amigoOneImage from '@/assets/amigo-one.webp'
 import goMessengerImage from '@/assets/go-message.webp'
 import cdaAppImage from '@/assets/cda.webp'
+import jublyAppImage from '@/assets/jubly-app.png'
 
 const Projects = () => {
   const projects = [
@@ -46,7 +47,8 @@ const Projects = () => {
         "Advanced search and filtering",
       ],
       icon: <Users className="text-primary" size={32} />,
-      status: "MVP Complete"
+      status: "MVP Complete",
+      image: jublyAppImage
     },
     {
       title: "CDA App",
