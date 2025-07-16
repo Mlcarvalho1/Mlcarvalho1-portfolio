@@ -58,10 +58,10 @@ const Skills = () => {
       icon: <Cog className="text-accent" size={24} />,
       title: "Other Technologies",
       skills: [
-        { name: "Machine Learning", level: 75 },
-        { name: "Data Analysis", level: 80 },
+        { name: "AI Integration", level: 80 },
         { name: "Algorithms", level: 85 },
-        { name: "System Design", level: 75 }
+        { name: "System Design", level: 75 },
+        { name: "Software Architecture", level: 80 }
       ]
     }
   ];

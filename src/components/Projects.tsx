@@ -5,13 +5,13 @@ const Projects = () => {
   const projects = [
     {
       title: "Amigo One",
-      description: "A comprehensive mobile application designed for healthcare professionals, serving thousands of daily users. Built with React Native and robust backend infrastructure to handle high-volume medical data and user interactions.",
-      technologies: ["React Native", "Node.js", "PostgreSQL", "Firebase", "Redux"],
+      description: "A comprehensive mobile application for healthcare professionals with thousands of daily users. Features Amigo Intelligence, an internal AI system that provides medical solutions including diagnosis assistance, automated consult summaries from audio recordings, and intelligent scheduling optimization.",
+      technologies: ["React Native", "Node.js", "PostgreSQL", "Firebase", "AI APIs"],
       features: [
-        "Real-time medical data synchronization",
-        "Secure patient information management",
-        "Multi-user collaboration tools",
-        "Offline functionality for critical features"
+        "AI-powered diagnosis assistance",
+        "Audio-to-text consult summarization",
+        "Intelligent appointment scheduling",
+        "Real-time medical data synchronization"
       ],
       icon: <Heart className="text-destructive" size={32} />,
       status: "Production - 1000+ daily users",
