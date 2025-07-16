@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTheme } from 'next-themes';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const { theme, setTheme } = useTheme();
 
   const navItems = [
     { id: 'hero', label: 'Home' },
@@ -12,8 +14,6 @@ const Navigation = () => {
     { id: 'education', label: 'Education' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
-    { id: 'achievements', label: 'Achievements' },
-    { id: 'japan', label: 'Why Japan' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -43,6 +43,10 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
@@ -50,7 +54,7 @@ const Navigation = () => {
           <div className="font-bold text-xl text-primary">MC</div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -62,17 +66,24 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <Button variant="ghost" size="sm" onClick={toggleTheme}>
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </Button>
+          {/* Mobile Navigation */}
+          <div className="flex items-center gap-2 md:hidden">
+            <Button variant="ghost" size="sm" onClick={toggleTheme}>
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
