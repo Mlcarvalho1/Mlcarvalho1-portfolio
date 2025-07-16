@@ -1,5 +1,6 @@
 import { Quote, Linkedin } from 'lucide-react';
-import manoelAvatar from '@/assets/manoel-avatar.jpg';
+import danielAvatar from '@/assets/daniel-avatar.jpg';
+import marceloAvatar from '@/assets/marcelo-avatar.jpg'
 
 const Recommendations = () => {
   const recommendations = [
@@ -9,7 +10,7 @@ const Recommendations = () => {
       company: "JavaScript | TypeScript | React | React Native | Node | Jest | Git | SQL",
       date: "July 16, 2025",
       content: "Working with Manoel has been a very positive experience. He is an extremely committed professional, with a solid technical foundation and a collaborative attitude on a daily basis. Always ready to help, he actively contributes to team growth and takes on leadership in projects with great responsibility and clarity. He is someone who instills confidence, solves problems efficiently, and is always looking for the best solutions together with the team.",
-      avatar: "/lovable-uploads/eebdd442-2292-41de-a872-1a241ba3e0f2.png",
+      avatar: marceloAvatar,
       linkedinUrl: "#"
     },
     {
@@ -18,7 +19,7 @@ const Recommendations = () => {
       company: "LinkedIn",
       date: "July 16, 2025", 
       content: "I had the experience of working side by side with Manoel and I know what a great professional he is, excellent technical level in various programming languages, leadership being one of his strong points, I certainly recommend him!",
-      avatar: manoelAvatar,
+      avatar: danielAvatar,
       linkedinUrl: "#"
     }
   ];
@@ -45,7 +46,7 @@ const Recommendations = () => {
                       className="w-16 h-16 rounded-full object-cover border-2 border-border"
                     />
                   </div>
-                  
+
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-4">
                       <div>

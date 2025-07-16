@@ -61,7 +61,7 @@ const Education = () => {
                       <li>• Machine Learning</li>
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
                       <Award className="text-accent" size={18} />
@@ -72,7 +72,6 @@ const Education = () => {
                       <li>• Artificial Intelligence</li>
                       <li>• Full-Stack Web Development</li>
                       <li>• Software Architecture</li>
-                      <li>• Cloud Computing</li>
                       <li>• DevOps & System Design</li>
                     </ul>
                   </div>

@@ -94,7 +94,7 @@ const Contact = () => {
             {/* Social Links and CTA */}
             <div>
               <h3 className="text-2xl font-bold mb-8">Find Me Online</h3>
-              
+
               <div className="space-y-6 mb-8">
                 {socialLinks.map((social, index) => (
                   <div key={index} className="bg-card rounded-lg shadow-card p-6 border border-border">
@@ -123,27 +123,16 @@ const Contact = () => {
                 <Send className="mx-auto mb-4" size={32} />
                 <h4 className="text-xl font-bold mb-4">Ready to Start a Conversation?</h4>
                 <p className="opacity-90 mb-6">
-                  Whether it's about internship opportunities, project collaborations, 
+                  Whether it's about opportunities, project collaborations,
                   or just a friendly chat about technology, I'd love to hear from you!
                 </p>
                 <Button variant="secondary" size="lg" asChild>
-                  <a href="mailto:manoel.carvalho@example.com">
+                  <a href="mailto:mlc6@cin.ufpe.br">
                     <Mail size={16} className="mr-2" />
                     Send Email
                   </a>
                 </Button>
               </div>
-            </div>
-          </div>
-
-          {/* Footer Note */}
-          <div className="mt-16 text-center">
-            <div className="bg-muted/50 rounded-lg p-6">
-              <p className="text-sm text-muted-foreground">
-                <strong>Note:</strong> I'm actively seeking international internship opportunities, 
-                particularly in Japan. I'm available for remote collaboration and willing to relocate 
-                for the right opportunity. Let's build something amazing together!
-              </p>
             </div>
           </div>
         </div>

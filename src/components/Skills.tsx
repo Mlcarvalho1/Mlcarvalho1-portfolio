@@ -6,11 +6,12 @@ const Skills = () => {
       icon: <Code className="text-primary" size={24} />,
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "JavaScript", level: 85 },
+        { name: "JavaScript", level: 90 },
+        { name: "TypeScript", level: 75 },
         { name: "Go", level: 75 },
-        { name: "C++", level: 80 },
-        { name: "Haskell", level: 70 },
+        { name: "Python", level: 75 },
+        { name: "C++", level: 60 },
+        { name: "Haskell", level: 40 },
         { name: "SQL", level: 85 }
       ]
     },
@@ -39,7 +40,7 @@ const Skills = () => {
       title: "Databases & Backend",
       skills: [
         { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 75 },
+        { name: "MongoDB", level: 50 },
         { name: "Firebase Firestore", level: 85 },
         { name: "API Design", level: 80 }
       ]
@@ -84,7 +85,7 @@ const Skills = () => {
                   {category.icon}
                   <h3 className="text-lg font-semibold">{category.title}</h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>
@@ -109,7 +110,7 @@ const Skills = () => {
             <div className="bg-gradient-subtle rounded-lg p-8 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold mb-4">Currently Learning</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                {["Rust", "Kubernetes", "TypeScript", "GraphQL", "AWS", "React Native Web"].map((tech) => (
+                {["Quantum Computing", "Kubernetes", "AWS", "React Native Web", "Embedded Systems", "Raspberry Pi"].map((tech) => (
                   <span
                     key={tech}
                     className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"

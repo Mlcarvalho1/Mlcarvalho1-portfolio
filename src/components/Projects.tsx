@@ -1,52 +1,64 @@
-import { ExternalLink, Github, Smartphone, Users, Zap, Heart } from 'lucide-react';
+import { ExternalLink, Github, Smartphone, Users, Zap, Heart, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import amigoOneImage from '@/assets/amigo-one.webp'
+import goMessengerImage from '@/assets/go-message.webp'
+import cdaAppImage from '@/assets/cda.webp'
 
 const Projects = () => {
   const projects = [
     {
       title: "Amigo One",
-      description: "A comprehensive mobile application for healthcare professionals with thousands of daily users. Features Amigo Intelligence, an internal AI system that provides medical solutions including diagnosis assistance, automated consult summaries from audio recordings, and intelligent scheduling optimization.",
-      technologies: ["React Native", "Node.js", "PostgreSQL", "Firebase", "AI APIs"],
+      description: "Amigo One is a mobile-first, all‑in‑one telehealth platform empowering medical professionals to manage their practice entirely via smartphone—covering patient scheduling, teleconsultations, digital prescriptions, secure recordkeeping, billing, and even digital accounting and marketing modules",
+      technologies: ["React Native", "Node.js", "PostgreSQL", "AI APIs"],
       features: [
+        "Secure Telemedicine",
+        "Digital Prescriptions & Documents",
         "AI-powered diagnosis assistance",
-        "Audio-to-text consult summarization",
-        "Intelligent appointment scheduling",
-        "Real-time medical data synchronization"
+        "Patient & Appointment Management",
+        "Secure, Compliant Mobile Platform"
       ],
       icon: <Heart className="text-destructive" size={32} />,
-      status: "Production - 1000+ daily users",
-      githubLink: "#",
-      liveLink: "#"
+      status: "Production - 20000+ daily users",
+      liveLink: "https://www.amigotech.com.br/amigo-one",
+      image: amigoOneImage
+    },
+    {
+      title: "Go messager",
+      description: "Led the development of the backend for a real-time web chat application that enables users to exchange messages through an interactive interface. Gained hands-on experience with Go (Golang), focusing on performance and concurrency, and implemented WebSocket communication to ensure seamless, low-latency message delivery.",
+      technologies: ["React", "Golang", "Go Fiber", "PostgreSQL", "TypeScript"],
+      features: [
+        "Chat interface",
+        "User authentication",
+        "Real-time messaging",
+        "Websocket"
+      ],
+      icon: <MessageCircle className="text-primary" size={32} />,
+      status: "Beta Testing",
+      githubLink: "https://github.com/Mlcarvalho1/go-messenger",
+      image: goMessengerImage
     },
     {
       title: "Jubly App",
       description: "A full-stack service matching platform that connects service providers with customers. Features real-time matching algorithms, secure payment processing, and comprehensive user management.",
-      technologies: ["React Native", "Expo", "Firebase", "Tailwind CSS", "TypeScript"],
+      technologies: ["React Native", "Expo", "Firebase", "TypeScript"],
       features: [
         "Smart service matching algorithm",
-        "Integrated payment system",
-        "Real-time chat functionality",
-        "Advanced search and filtering"
+        "Advanced search and filtering",
       ],
       icon: <Users className="text-primary" size={32} />,
-      status: "MVP Complete",
-      githubLink: "#",
-      liveLink: "#"
+      status: "MVP Complete"
     },
     {
       title: "CDA App",
       description: "A point management system with gamification elements. Includes user authentication, real-time point tracking, rewards system, and analytics dashboard for administrators.",
-      technologies: ["React Native", "Node.js", "MongoDB", "Socket.io", "JWT"],
+      technologies: ["React Native", "Expo", "Firebase", "TypeScript"],
       features: [
         "Gamified point system",
-        "Real-time leaderboards",
         "Rewards and achievement system",
-        "Analytics dashboard"
       ],
       icon: <Zap className="text-accent" size={32} />,
-      status: "Beta Testing",
-      githubLink: "#",
-      liveLink: "#"
+      status: "Production",
+      image: cdaAppImage
     }
   ];
 
@@ -64,12 +76,20 @@ const Projects = () => {
           <div className="grid lg:grid-cols-1 gap-12">
             {projects.map((project, index) => (
               <div key={index} className="bg-card rounded-lg shadow-card border border-border overflow-hidden">
+                {project.image && (
+                  <div className="w-full h-64 relative">
+                    <img 
+                      src={project.image} 
+                      alt={`${project.title} preview`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <div className="p-8">
                   <div className="flex items-start gap-6">
                     <div className="bg-background p-4 rounded-full flex-shrink-0">
                       {project.icon}
                     </div>
-                    
                     <div className="flex-1">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                         <div>
@@ -79,18 +99,14 @@ const Projects = () => {
                           </div>
                         </div>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm" asChild>
-                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                              <Github size={16} className="mr-2" />
-                              Code
-                            </a>
-                          </Button>
+                          {project.liveLink && (
                           <Button variant="outline" size="sm" asChild>
                             <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                               <ExternalLink size={16} className="mr-2" />
-                              Demo
-                            </a>
-                          </Button>
+                                Demo
+                              </a>
+                            </Button>
+                          )}
                         </div>
                       </div>
 
