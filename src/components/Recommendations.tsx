@@ -1,8 +1,10 @@
 import { Quote, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import danielAvatar from '@/assets/daniel-avatar.jpg';
 import marceloAvatar from '@/assets/marcelo-avatar.jpg'
 
 const Recommendations = () => {
+  const { t } = useLanguage();
   const recommendations = [
     {
       name: "Marcelo Gomes",
@@ -29,9 +31,9 @@ const Recommendations = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Recommendations</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('recommendations.title')}</h2>
             <p className="text-lg text-muted-foreground">
-              What colleagues and collaborators say about working with me
+              {t('recommendations.subtitle')}
             </p>
           </div>
 
@@ -74,9 +76,9 @@ const Recommendations = () => {
 
           <div className="mt-12 text-center">
             <div className="bg-gradient-subtle rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-2">Connect with me on LinkedIn</h3>
+              <h3 className="text-lg font-semibold mb-2">{t('recommendations.connectLinkedIn')}</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                See more recommendations and professional connections
+                {t('recommendations.linkedInDesc')}
               </p>
               <a
                 href="https://www.linkedin.com/in/manoel-carvalho-350507236"
@@ -85,7 +87,7 @@ const Recommendations = () => {
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors font-medium"
               >
                 <Linkedin size={16} />
-                View LinkedIn Profile
+                {t('recommendations.viewProfile')}
               </a>
             </div>
           </div>

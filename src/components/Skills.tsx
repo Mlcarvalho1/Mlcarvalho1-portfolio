@@ -1,10 +1,13 @@
 import { Code, Database, Smartphone, Globe, Cloud, Cog } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Skills = () => {
+  const { t } = useLanguage();
+  
   const skillCategories = [
     {
       icon: <Code className="text-primary" size={24} />,
-      title: "Programming Languages",
+      title: t('skills.programmingLanguages'),
       skills: [
         { name: "JavaScript", level: 90 },
         { name: "TypeScript", level: 75 },
@@ -17,7 +20,7 @@ const Skills = () => {
     },
     {
       icon: <Smartphone className="text-accent" size={24} />,
-      title: "Mobile Development",
+      title: t('skills.mobileDevelopment'),
       skills: [
         { name: "React Native", level: 90 },
         { name: "Expo", level: 85 },
@@ -27,7 +30,7 @@ const Skills = () => {
     },
     {
       icon: <Globe className="text-primary" size={24} />,
-      title: "Web Development",
+      title: t('skills.webDevelopment'),
       skills: [
         { name: "React.js", level: 85 },
         { name: "Node.js", level: 80 },
@@ -37,7 +40,7 @@ const Skills = () => {
     },
     {
       icon: <Database className="text-accent" size={24} />,
-      title: "Databases & Backend",
+      title: t('skills.databasesBackend'),
       skills: [
         { name: "PostgreSQL", level: 80 },
         { name: "MongoDB", level: 50 },
@@ -47,7 +50,7 @@ const Skills = () => {
     },
     {
       icon: <Cloud className="text-primary" size={24} />,
-      title: "DevOps & Tools",
+      title: t('skills.devopsTools'),
       skills: [
         { name: "Docker", level: 75 },
         { name: "Git/GitHub", level: 90 },
@@ -57,7 +60,7 @@ const Skills = () => {
     },
     {
       icon: <Cog className="text-accent" size={24} />,
-      title: "Other Technologies",
+      title: t('skills.otherTechnologies'),
       skills: [
         { name: "AI Integration", level: 80 },
         { name: "Algorithms", level: 85 },
@@ -72,9 +75,9 @@ const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('skills.title')}</h2>
             <p className="text-lg text-muted-foreground">
-              A comprehensive overview of my technical expertise and proficiency levels
+              {t('skills.subtitle')}
             </p>
           </div>
 
@@ -108,7 +111,7 @@ const Skills = () => {
 
           <div className="mt-16 text-center">
             <div className="bg-gradient-subtle rounded-lg p-8 max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold mb-4">Currently Learning</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('skills.currentlyLearning')}</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {["Quantum Computing", "Kubernetes", "AWS", "React Native Web", "Embedded Systems", "Raspberry Pi"].map((tech) => (
                   <span

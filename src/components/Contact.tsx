@@ -1,24 +1,27 @@
 import { Mail, Linkedin, Github, MapPin, Phone, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Contact = () => {
+  const { t, tArray } = useLanguage();
+  
   const contactInfo = [
     {
       icon: <Mail className="text-primary" size={20} />,
-      label: "Email",
+      label: t('contact.email'),
       value: "manoel.carvalho@example.com",
       link: "mailto:manoel.carvalho@example.com"
     },
     {
       icon: <MapPin className="text-accent" size={20} />,
-      label: "Location",
-      value: "Recife, Brazil",
+      label: t('contact.location'),
+      value: t('contact.locationValue'),
       link: null
     },
     {
       icon: <Phone className="text-primary" size={20} />,
-      label: "Available for",
-      value: "Video calls, Interviews",
+      label: t('contact.availableFor'),
+      value: t('contact.availableForValue'),
       link: null
     }
   ];
@@ -29,14 +32,14 @@ const Contact = () => {
       label: "LinkedIn",
       username: "manoel-carvalho-350507236",
       link: "https://www.linkedin.com/in/manoel-carvalho-350507236",
-      description: "Professional profile and work experience"
+      description: t('contact.professionalProfile')
     },
     {
       icon: <Github className="text-foreground" size={24} />,
       label: "GitHub",
       username: "Mlcarvalho1",
       link: "https://github.com/Mlcarvalho1",
-      description: "Code repositories and contributions"
+      description: t('contact.codeRepositories')
     }
   ];
 
@@ -45,16 +48,16 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('contact.title')}</h2>
             <p className="text-lg text-muted-foreground">
-              I'm always excited to discuss new opportunities and collaborations
+              {t('contact.subtitle')}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
+              <h3 className="text-2xl font-bold mb-8">{t('contact.getInTouch')}</h3>
               
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
@@ -80,20 +83,18 @@ const Contact = () => {
               </div>
 
               <div className="bg-gradient-subtle rounded-lg p-6">
-                <h4 className="font-semibold mb-3">Open to Opportunities</h4>
+                <h4 className="font-semibold mb-3">{t('contact.openToOpportunities')}</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• International internships (Japan preferred)</li>
-                  <li>• Full-stack development projects</li>
-                  <li>• Mobile app development collaborations</li>
-                  <li>• AI/ML research opportunities</li>
-                  <li>• Open source contributions</li>
+                  {tArray('contact.opportunities').map((opportunity, index) => (
+                    <li key={index}>• {opportunity}</li>
+                  ))}
                 </ul>
               </div>
             </div>
 
             {/* Social Links and CTA */}
             <div>
-              <h3 className="text-2xl font-bold mb-8">Find Me Online</h3>
+              <h3 className="text-2xl font-bold mb-8">{t('contact.findMeOnline')}</h3>
 
               <div className="space-y-6 mb-8">
                 {socialLinks.map((social, index) => (
@@ -110,7 +111,7 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground mb-4">{social.description}</p>
                         <Button variant="outline" size="sm" asChild>
                           <a href={social.link} target="_blank" rel="noopener noreferrer">
-                            Visit Profile
+                            {t('contact.visitProfile')}
                           </a>
                         </Button>
                       </div>
@@ -121,15 +122,14 @@ const Contact = () => {
 
               <div className="bg-gradient-primary text-white rounded-lg p-8 text-center">
                 <Send className="mx-auto mb-4" size={32} />
-                <h4 className="text-xl font-bold mb-4">Ready to Start a Conversation?</h4>
+                <h4 className="text-xl font-bold mb-4">{t('contact.readyToStart')}</h4>
                 <p className="opacity-90 mb-6">
-                  Whether it's about opportunities, project collaborations,
-                  or just a friendly chat about technology, I'd love to hear from you!
+                  {t('contact.conversationDesc')}
                 </p>
                 <Button variant="secondary" size="lg" asChild>
                   <a href="mailto:mlc6@cin.ufpe.br">
                     <Mail size={16} className="mr-2" />
-                    Send Email
+                    {t('contact.sendEmail')}
                   </a>
                 </Button>
               </div>
