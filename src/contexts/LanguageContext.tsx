@@ -58,7 +58,7 @@ const translations = {
     'education.subtitle': 'My academic journey and foundation in Computer Engineering',
     'education.degree': 'Bachelor of Science in Computer Engineering',
     'education.university': 'Federal University of Pernambuco (UFPE)',
-    'education.period': '2024 - 2028 (Expected)',
+    'education.period': '2023 - 2028 (Expected)',
     'education.location': 'Recife, Brazil',
     'education.description': 'Currently pursuing a comprehensive degree in Computer Engineering at one of Brazil\'s most prestigious technical universities. The program combines theoretical foundations with practical applications in software development, algorithms, systems design, and emerging technologies.',
     'education.coreCoursework': 'Core Coursework',
@@ -114,7 +114,7 @@ const translations = {
     'timeline.juniorEngineerDuration': '1 year 5 months',
     'timeline.internDate': 'Apr 2022 - Aug 2022',
     'timeline.internDuration': '5 months',
-    'timeline.studentDate': '2024 - Present',
+    'timeline.studentDate': '2023 - Present',
 
     // competências
     'timeline.competency.agile': 'Agile Project Management',
@@ -258,7 +258,7 @@ const translations = {
     'education.subtitle': 'Minha jornada acadêmica e base em Engenharia da Computação',
     'education.degree': 'Bacharelado em Engenharia da Computação',
     'education.university': 'Universidade Federal de Pernambuco (UFPE)',
-    'education.period': '2024 - 2028 (Previsão)',
+    'education.period': '2023 - 2028 (Previsão)',
     'education.location': 'Recife, Brasil',
     'education.description': 'Atualmente cursando um diploma abrangente em Engenharia da Computação em uma das universidades mais prestigiadas do Brasil. O programa combina fundamentos teóricos com aplicações práticas em desenvolvimento de software, algoritmos, design de sistemas e tecnologias emergentes.',
     'education.coreCoursework': 'Disciplinas Principais',
@@ -315,7 +315,7 @@ const translations = {
     'timeline.juniorEngineerDuration': '1 ano e 5 meses',
     'timeline.internDate': 'Abr 2022 - Ago 2022',
     'timeline.internDuration': '5 meses',
-    'timeline.studentDate': '2024 - Presente',
+    'timeline.studentDate': '2023 - Presente',
 
     // competências
     'timeline.competency.agile': 'Gestão Ágil de Projetos',
