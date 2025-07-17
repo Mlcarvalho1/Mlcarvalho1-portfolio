@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTheme } from 'next-themes';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const { theme, setTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'education', label: 'Education' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'recommendations', label: 'Recommendations' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'hero', label: t('nav.home') },
+    { id: 'about', label: t('nav.about') },
+    { id: 'education', label: t('nav.education') },
+    { id: 'skills', label: t('nav.skills') },
+    { id: 'projects', label: t('nav.projects') },
+    { id: 'recommendations', label: t('nav.recommendations') },
+    { id: 'contact', label: t('nav.contact') },
   ];
 
   useEffect(() => {
@@ -48,6 +50,10 @@ const Navigation = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'pt' : 'en');
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4">
@@ -67,6 +73,10 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <Button variant="ghost" size="sm" onClick={toggleLanguage}>
+              <Languages size={20} />
+              <span className="ml-1 text-xs">{language.toUpperCase()}</span>
+            </Button>
             <Button variant="ghost" size="sm" onClick={toggleTheme}>
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
@@ -74,6 +84,10 @@ const Navigation = () => {
 
           {/* Mobile Navigation */}
           <div className="flex items-center gap-2 md:hidden">
+            <Button variant="ghost" size="sm" onClick={toggleLanguage}>
+              <Languages size={20} />
+              <span className="ml-1 text-xs">{language.toUpperCase()}</span>
+            </Button>
             <Button variant="ghost" size="sm" onClick={toggleTheme}>
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>

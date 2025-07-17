@@ -1,7 +1,10 @@
 import { ArrowDown, Github, Linkedin, MapPin, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
@@ -18,30 +21,28 @@ const Hero = () => {
               Manoel Carvalho
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
-              Computer Engineering Student & Full-Stack Developer
+              {t('hero.title')}
             </h2>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <MapPin size={16} />
-              <span>Recife, Brazil</span>
+              <span>{t('hero.location')}</span>
             </div>
             <div className="flex items-center gap-2">
               <GraduationCap size={16} />
-              <span>UFPE • Expected 2028</span>
+              <span>{t('hero.education')}</span>
             </div>
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Passionate about building innovative mobile and web applications. 
-            Seeking international internship opportunities in Japan to expand my technical expertise 
-            and cultural understanding.
+            {t('hero.description')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" onClick={scrollToAbout} className="shadow-elegant">
-              View My Work
+              {t('hero.viewWork')}
               <ArrowDown className="ml-2" size={16} />
             </Button>
             <div className="flex gap-4 justify-center">
