@@ -53,12 +53,13 @@ const Education = () => {
                       {t('education.coreCoursework')}
                     </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Data Structures & Algorithms</li>
-                      <li>• Software Engineering</li>
-                      <li>• Database Systems</li>
-                      <li>• Computer Networks</li>
-                      <li>• Operating Systems</li>
-                      <li>• Machine Learning</li>
+                      <li>• {t('education.coreCourseworkValue1')}</li>
+                      <li>• {t('education.coreCourseworkValue2')}</li>
+                      <li>• {t('education.coreCourseworkValue3')}</li>
+                      <li>• {t('education.coreCourseworkValue4')}</li>
+                      <li>• {t('education.coreCourseworkValue5')}</li>
+                      <li>• {t('education.coreCourseworkValue6')}</li>
+                      <li>• {t('education.coreCourseworkValue7')}</li>
                     </ul>
                   </div>
 
@@ -68,11 +69,13 @@ const Education = () => {
                       {t('education.specialization')}
                     </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Mobile Application Development</li>
-                      <li>• Artificial Intelligence</li>
-                      <li>• Full-Stack Web Development</li>
-                      <li>• Software Architecture</li>
-                      <li>• DevOps & System Design</li>
+                      <li>• {t('education.specializationValue1')}</li>
+                      <li>• {t('education.specializationValue2')}</li>
+                      <li>• {t('education.specializationValue3')}</li>
+                      <li>• {t('education.specializationValue4')}</li>
+                      <li>• {t('education.specializationValue5')}</li>
+                      <li>• {t('education.specializationValue6')}</li>
+                      <li>• {t('education.specializationValue7')}</li>
                     </ul>
                   </div>
                 </div>

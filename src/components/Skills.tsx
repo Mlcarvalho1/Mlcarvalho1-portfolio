@@ -10,12 +10,12 @@ const Skills = () => {
       title: t('skills.programmingLanguages'),
       skills: [
         { name: "JavaScript", level: 90 },
+        { name: "SQL", level: 85 },
         { name: "TypeScript", level: 75 },
-        { name: "Go", level: 75 },
-        { name: "Python", level: 75 },
-        { name: "C++", level: 60 },
-        { name: "Haskell", level: 40 },
-        { name: "SQL", level: 85 }
+        { name: "Go", level: 65 },
+        { name: "Python", level: 65 },
+        { name: "C++", level: 40 },
+        { name: "Haskell", level: 30 }
       ]
     },
     {
@@ -23,49 +23,49 @@ const Skills = () => {
       title: t('skills.mobileDevelopment'),
       skills: [
         { name: "React Native", level: 90 },
+        { name: "Mobile UI/UX", level: 85 },
         { name: "Expo", level: 85 },
         { name: "Firebase", level: 80 },
-        { name: "Mobile UI/UX", level: 85 }
       ]
     },
     {
       icon: <Globe className="text-primary" size={24} />,
       title: t('skills.webDevelopment'),
       skills: [
-        { name: "React.js", level: 85 },
-        { name: "Node.js", level: 80 },
         { name: "Tailwind CSS", level: 90 },
-        { name: "RESTful APIs", level: 85 }
+        { name: "React.js", level: 85 },
+        { name: "RESTful APIs", level: 85 },
+        { name: "Node.js", level: 80 }
       ]
     },
     {
       icon: <Database className="text-accent" size={24} />,
       title: t('skills.databasesBackend'),
       skills: [
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 50 },
+        { name: "PostgreSQL", level: 85 },
         { name: "Firebase Firestore", level: 85 },
-        { name: "API Design", level: 80 }
+        { name: "API Design", level: 80 },
+        { name: "MongoDB", level: 50 }
       ]
     },
     {
       icon: <Cloud className="text-primary" size={24} />,
       title: t('skills.devopsTools'),
       skills: [
-        { name: "Docker", level: 75 },
         { name: "Git/GitHub", level: 90 },
         { name: "CI/CD", level: 70 },
-        { name: "Linux", level: 80 }
+        { name: "Docker", level: 65 },
+        { name: "Linux", level: 60 }
       ]
     },
     {
       icon: <Cog className="text-accent" size={24} />,
       title: t('skills.otherTechnologies'),
       skills: [
-        { name: "AI Integration", level: 80 },
         { name: "Algorithms", level: 85 },
+        { name: "AI Integration", level: 80 },
+        { name: "Software Architecture", level: 80 },
         { name: "System Design", level: 75 },
-        { name: "Software Architecture", level: 80 }
       ]
     }
   ];

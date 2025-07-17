@@ -2,27 +2,37 @@ import { Quote, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import danielAvatar from '@/assets/daniel-avatar.jpg';
 import marceloAvatar from '@/assets/marcelo-avatar.jpg'
+import rafaelAvatar from '@/assets/rafael.jpeg'
 
 const Recommendations = () => {
   const { t } = useLanguage();
   const recommendations = [
     {
       name: "Marcelo Gomes",
-      title: "Fullstack Developer",
+      title: t('recommendations.marceloTitle'),
       company: "JavaScript | TypeScript | React | React Native | Node | Jest | Git | SQL",
-      date: "July 16, 2025",
-      content: "Working with Manoel has been a very positive experience. He is an extremely committed professional, with a solid technical foundation and a collaborative attitude on a daily basis. Always ready to help, he actively contributes to team growth and takes on leadership in projects with great responsibility and clarity. He is someone who instills confidence, solves problems efficiently, and is always looking for the best solutions together with the team.",
+      date: t('recommendations.marceloDate'),
+      content: t('recommendations.marceloContent'),
       avatar: marceloAvatar,
-      linkedinUrl: "#"
+      linkedinUrl: "https://www.linkedin.com/in/marcelogomes90/"
+    },
+    {
+      name: "Rafael Ghinato",
+      title: t('recommendations.rafaelTitle'),
+      company: "Software Engineering | Node.js | PostgreSQL | React | React Native | Javascript",
+      date: t('recommendations.rafaelDate'),
+      content: t('recommendations.rafaelContent'),
+      avatar: rafaelAvatar,
+      linkedinUrl: "https://www.linkedin.com/in/rafael-oliveira-b2b107236/"
     },
     {
       name: "Daniel Cavalcanti",
-      title: "Full-Stack Developer",
+      title: t('recommendations.danielTitle'),
       company: "LinkedIn",
-      date: "July 16, 2025", 
-      content: "I had the experience of working side by side with Manoel and I know what a great professional he is, excellent technical level in various programming languages, leadership being one of his strong points, I certainly recommend him!",
+      date: t('recommendations.danielDate'),
+      content: t('recommendations.danielContent'),
       avatar: danielAvatar,
-      linkedinUrl: "#"
+      linkedinUrl: "https://www.linkedin.com/in/daniel-cavalcanti1/"
     }
   ];
 
