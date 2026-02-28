@@ -1,16 +1,19 @@
 {
   "name": "manoel-carvalho-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "type": "module",
+  "homepage": "https://mlcarvalho1.github.io/Mlcarvalho1-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.34.3",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-type-animation": "^3.2.0"
